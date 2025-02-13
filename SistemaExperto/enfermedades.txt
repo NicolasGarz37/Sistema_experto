@@ -1,0 +1,8 @@
+Gripe; fiebre, tos, dificultad para respirar; Reposo e hidratación
+Meningitis; dolor de cabeza, nauseas, fiebre; Consultar con un médico urgente
+Gastroenteritis; dolor abdominal, diarrea, fiebre; Hidratación y dieta blanda
+Amigdalitis; dolor de garganta, fiebre, dificultad para tragar; Antibióticos si es bacteriana, reposo si es viral
+Alergia; erupción en la piel, picazón, hinchazón; Antihistamínicos y evitar el alérgeno
+Hepatitis; fatiga, piel y ojos amarillos, dolor abdominal; Consultar con un médico para análisis y tratamiento específico
+Artritis; dolor en las articulaciones, rigidez matutina, inflamación persistente; Antiinflamatorios y terapia física.
+Sarampión; fiebre alta, sarpullido rojo, ojos enrojecidos; Reposo, hidratación y control de fiebre

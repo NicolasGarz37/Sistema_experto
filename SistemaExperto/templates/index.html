@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Experto Médico</title>
+    <script>
+        function consultar() {
+            let sintomas = document.getElementById("sintomas").value;
+            let sintomasArray = sintomas.split(",").map(s => s.trim());
+
+            fetch("/diagnose", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ "symptoms": sintomasArray })
+            })
+            .then(response => response.json())
+            .then(data => {
+                let resultado = document.getElementById("resultado");
+                if (data.enfermedad) {
+                    resultado.innerHTML = `<strong>Diagnóstico:</strong> ${data.enfermedad}<br>
+                                           <strong>Tratamiento:</strong> ${data.tratamiento}`;
+                    resultado.style.color = "green";
+                } else {
+                    resultado.innerHTML = data.error;
+                    resultado.style.color = "red";
+                }
+            })
+            .catch(error => console.error("Error:", error));
+        }
+    </script>
+</head>
+<body>
+    <h1>Sistema Experto Médico</h1>
+    <p>Ingrese al menos 3 síntomas separados por comas:</p>
+    <input type="text" id="sintomas" placeholder="Ejemplo: fiebre, tos, dificultad para respirar">
+    <button onclick="consultar()">Consultar</button>
+    <p id="resultado" style="color: red;"></p>
+</body>
+</html>
