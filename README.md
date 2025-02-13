@@ -4,6 +4,11 @@ Los sistemas expertos (SE) son programas informáticos que utilizan la inteligen
 
 ## Descripción
 Este es un sistema experto desarrollado en Flask que permite diagnosticar enfermedades basándose en los síntomas ingresados por el usuario. Utiliza la librería experta de Python experta para la toma de decisiones.
+## Requisitos
+- Instalar python y tener un entorno en donde ejecutarlo
+- Tener un entorno donde programar html.
+- Pip install flask
+- Pip install experta
 ## Uso
 - Crear un entorno virtual venv e inicializarlo
 - Instalar dependencias
